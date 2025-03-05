@@ -1,0 +1,29 @@
+#include<stdio.h>
+void main()
+{
+	int n,sum = 0,m,prod = 1,count = 0,temp;
+	printf("Enter the positive number : ");
+	scanf("%d",&n);
+	temp = n;
+	if(n==0){
+		printf("The entered digits are zero");
+	}	
+	while(n>0){
+		m = n%10;
+		sum += m;
+		prod *= m;
+		n = n/10;
+		count++;
+	}
+	printf("The number of digits is %d \n",count);
+	if((sum+prod)==temp){
+		printf("The given number %d satisfies the condition \n",temp);
+	}
+	else
+		printf("0 \n");
+}
+
+
+
+
+
