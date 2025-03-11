@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() {
+    int n, i;
+
+    printf("Enter the number of elements: ");
+    scanf("%d", &n);
+
+    int Arr[n];
+
+    for(i = 0; i < n; i++) {
+        printf("Enter element %d: ", i + 1);
+        scanf("%d", &Arr[i]);
+    }
+
+    int temp;
+    for(i = 0; i < n / 2; i++) {
+        temp = Arr[i];
+        Arr[i] = Arr[n - i - 1];
+        Arr[n - i - 1] = temp;
+    }
+
+    printf("Elements after reversing:\n");
+    for(i = 0; i < n; i++) {
+        printf("%d\n", Arr[i]);
+    }
+
+    return 0;
+}
+
+
+
+
